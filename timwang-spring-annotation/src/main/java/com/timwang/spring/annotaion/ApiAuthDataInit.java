@@ -1,6 +1,5 @@
 package com.timwang.spring.annotaion;
 
-import com.google.common.collect.Lists;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
@@ -10,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -20,7 +20,7 @@ import java.util.Map;
 @Component
 @Configuration
 public class ApiAuthDataInit implements ApplicationContextAware {
-    public static List<String> checkApis = Lists.newArrayList();
+    public static List<String> checkApis = new ArrayList<>();
     @Override
     public void setApplicationContext(ApplicationContext ctx) throws BeansException {
         Map<String, Object> beanMap = ctx.getBeansWithAnnotation(Controller.class);

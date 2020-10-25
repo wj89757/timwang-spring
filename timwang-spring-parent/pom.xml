@@ -19,7 +19,7 @@
         <module>../timwang-spring-annotation</module>
         <module>../timwang-spring-bean</module>
         <module>../timwang-spring-mybatis</module>
-        <module>../timwang-spring-tag</module>
+        <module>../timwang-spring-other</module>
     </modules>
 
     <properties>
